@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Controller'.
  *
- * Model version                  : 1.176
+ * Model version                  : 1.182
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Sun Nov  1 13:05:02 2026
+ * C/C++ source code generated on : Sun Nov  1 19:29:10 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -22,12 +22,19 @@
 
 #include "Controller_types.h"
 
+/* Block states (default storage) for model 'Controller' */
+typedef struct {
+  real32_T Previous_Output;            /* '<S5>/MATLAB Function' */
+  boolean_T Initialized;               /* '<S5>/MATLAB Function' */
+} DW_Controller_f_T;
+
 /* Real-time Model Data Structure */
 struct tag_RTM_Controller_T {
   const char_T **errorStatus;
 };
 
 typedef struct {
+  DW_Controller_f_T rtdw;
   RT_MODEL_Controller_T rtm;
 } MdlrefDW_Controller_T;
 
@@ -45,7 +52,7 @@ extern Test_Output_t Test_Output;      /*  */
 /* Model reference registration function */
 extern void Controller_initialize(const char_T **rt_errorStatus,
   RT_MODEL_Controller_T *const Controller_M);
-extern void ControllerTask(void);
+extern void ControllerTask(DW_Controller_f_T *localDW);
 
 /*-
  * These blocks were eliminated from the model due to optimizations:
@@ -72,12 +79,14 @@ extern void ControllerTask(void);
  * '<S2>'   : 'Controller/ControllerTask/ControllerMainFunction'
  * '<S3>'   : 'Controller/ControllerTask/ControllerMainFunction/Decoder'
  * '<S4>'   : 'Controller/ControllerTask/ControllerMainFunction/Gates'
- * '<S5>'   : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero'
- * '<S6>'   : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero1'
- * '<S7>'   : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero2'
- * '<S8>'   : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero3'
- * '<S9>'   : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero4'
- * '<S10>'  : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero5'
+ * '<S5>'   : 'Controller/ControllerTask/ControllerMainFunction/Low-Pass Filter'
+ * '<S6>'   : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero'
+ * '<S7>'   : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero1'
+ * '<S8>'   : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero2'
+ * '<S9>'   : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero3'
+ * '<S10>'  : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero4'
+ * '<S11>'  : 'Controller/ControllerTask/ControllerMainFunction/Gates/Compare To Zero5'
+ * '<S12>'  : 'Controller/ControllerTask/ControllerMainFunction/Low-Pass Filter/MATLAB Function'
  */
 #endif                                 /* RTW_HEADER_Controller_h_ */
 

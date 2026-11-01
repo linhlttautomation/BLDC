@@ -5,7 +5,7 @@
  *
  * Model version                  : 1.47
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Sun Nov  1 12:53:53 2026
+ * C/C++ source code generated on : Sun Nov  1 19:29:40 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -44,7 +44,7 @@ void Controller_Function(void)         /* Explicit Task: Controller_D1 */
   /* ModelReference generated from: '<Root>/Controller' incorporates:
    *  Inport generated from: '<Root>/In Bus Element'
    */
-  ControllerTask();
+  ControllerTask(&(BLDC_MOTOR_ASW_DW.Controller_InstanceData.rtdw));
 
   /* End of Outputs for RootInportFunctionCallGenerator generated from: '<Root>/Controller_D1' */
 }

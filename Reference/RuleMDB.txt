@@ -1,0 +1,46 @@
+RULE:
+1. Sử dụng bus cho Interface, kết thúc bằng _t
+VD: Bsw_Bldc_Speed_t, Bldc_Speed_t 
+2. Input của subsystem là màu xanh lá, output màu đỏ
+3. Tên của biến: Tiền tố+Tên biến
+f: Float
+b: Boolean
+u16: Uint16
+i16: Int16
+u32: Uint32
+i32: Int32
+u8: Uint8
+i8: Int8
+Ví dụ: bEnable
+4. Tên của Enum: e+Tên biến
+Ví dụ: eMotor_Control.On
+5. Tên biến Const: c+Tên biến
+Ví dụ: cKp_Parameter
+6. BLDC
+	APPLICATION	
+		Swc_Model
+			Input_Processing.slx
+			Bldc_Control.slx
+			Protection_Handler.slx
+			Fault_Reaction.slx
+			Fault_Diagnostic.slx
+		Swc_Dictionary
+			Input_Processing.sldd
+			Bldc_Control.sldd
+			Protection_Handler.sldd
+			Fault_Reaction.sldd
+			Fault_Diagnostic.sld
+		Arch_Model
+			Bldc_Arch_Model.slx
+		Arch_Dictionary
+			Bldc_Arch_Model.sldd
+	SOURCE_CODE
+	TOOL
+	SIMULATION
+	APPLICATION_CODEGEN
+7. Các biến từ dưới BSW lên thì Tiền tố+Bsw_Tên biến
+VD: fBsw_CurrentA
+	
+	
+
+
