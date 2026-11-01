@@ -1,0 +1,6 @@
+BLDC_MOTOR_ASW.c:40:6:Controller_Function	8	static
+BLDC_MOTOR_ASW.c:53:6:Protection_Function	8	static
+BLDC_MOTOR_ASW.c:64:6:CalibAdc_Function	8	static
+BLDC_MOTOR_ASW.c:77:6:StateControl_Function	8	static
+BLDC_MOTOR_ASW.c:90:6:BLDC_MOTOR_ASW_initialize	8	static
+BLDC_MOTOR_ASW.c:110:6:BLDC_MOTOR_ASW_terminate	4	static

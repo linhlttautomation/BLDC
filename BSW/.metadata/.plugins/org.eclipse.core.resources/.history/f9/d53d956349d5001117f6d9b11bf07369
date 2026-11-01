@@ -1,0 +1,17 @@
+Drivers/Source_Simulink/Controller/Controller_data.o: \
+ ../Drivers/Source_Simulink/Controller/Controller_data.c \
+ ../Drivers/Source_Simulink/Controller/Controller_private.h \
+ D:/BLDC/BSW/bldc_stm32/Drivers/Source_Simulink/rtwtypes.h \
+ D:/BLDC/BSW/bldc_stm32/Drivers/Source_Simulink/model_reference_types.h \
+ D:/BLDC/BSW/bldc_stm32/Drivers/Source_Simulink/rtwtypes.h \
+ ../Drivers/Source_Simulink/Controller/Controller_types.h
+
+../Drivers/Source_Simulink/Controller/Controller_private.h:
+
+D:/BLDC/BSW/bldc_stm32/Drivers/Source_Simulink/rtwtypes.h:
+
+D:/BLDC/BSW/bldc_stm32/Drivers/Source_Simulink/model_reference_types.h:
+
+D:/BLDC/BSW/bldc_stm32/Drivers/Source_Simulink/rtwtypes.h:
+
+../Drivers/Source_Simulink/Controller/Controller_types.h:

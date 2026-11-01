@@ -1,0 +1,90 @@
+/*
+ * File: Protection.h
+ *
+ * Code generated for Simulink model 'Protection'.
+ *
+ * Model version                  : 1.53
+ * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
+ * C/C++ source code generated on : Sun Nov  1 12:53:45 2026
+ *
+ * Target selection: ert.tlc
+ * Embedded hardware selection: Intel->x86-64 (Windows64)
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ */
+
+#ifndef RTW_HEADER_Protection_h_
+#define RTW_HEADER_Protection_h_
+#ifndef Protection_COMMON_INCLUDES_
+#define Protection_COMMON_INCLUDES_
+#include "rtwtypes.h"
+#endif                                 /* Protection_COMMON_INCLUDES_ */
+
+#include "Protection_types.h"
+
+/* Block states (default storage) for model 'Protection' */
+typedef struct {
+  real32_T Fault_Timer;                /* '<S4>/MATLAB Function' */
+  real32_T Recovery_Timer;             /* '<S4>/MATLAB Function' */
+  boolean_T Fault_Active;              /* '<S4>/MATLAB Function' */
+} DW_Protection_f_T;
+
+/* Real-time Model Data Structure */
+struct tag_RTM_Protection_T {
+  const char_T **errorStatus;
+};
+
+typedef struct {
+  DW_Protection_f_T rtdw;
+  RT_MODEL_Protection_T rtm;
+} MdlrefDW_Protection_T;
+
+/*
+ * Exported Global Signals
+ *
+ * Note: Exported global signals are block signals with an exported global
+ * storage class designation.  Code generation will declare the memory for
+ * these signals and export their symbols.
+ *
+ */
+extern Test_Protection_In_t Test_Protection_In;/* '<Root>/Test_Protection_In' */
+extern Test_Protection_Out_t Test_Protection_Out;/*  */
+
+/* Model reference registration function */
+extern void Protection_initialize(const char_T **rt_errorStatus,
+  RT_MODEL_Protection_T *const Protection_M);
+extern void Protection(DW_Protection_f_T *localDW);
+
+/*-
+ * The generated code includes comments that allow you to trace directly
+ * back to the appropriate location in the model.  The basic format
+ * is <system>/block_name, where system is the system number (uniquely
+ * assigned by Simulink) and block_name is the name of the block.
+ *
+ * Use the MATLAB hilite_system command to trace the generated code back
+ * to the model.  For example,
+ *
+ * hilite_system('<S3>')    - opens system 3
+ * hilite_system('<S3>/Kp') - opens and selects block Kp which resides in S3
+ *
+ * Here is the system hierarchy for this model
+ *
+ * '<Root>' : 'Protection'
+ * '<S1>'   : 'Protection/ProtectionTask'
+ * '<S2>'   : 'Protection/ProtectionTask/Protection'
+ * '<S3>'   : 'Protection/ProtectionTask/Protection/Condition'
+ * '<S4>'   : 'Protection/ProtectionTask/Protection/Debound'
+ * '<S5>'   : 'Protection/ProtectionTask/Protection/Enumerated Constant'
+ * '<S6>'   : 'Protection/ProtectionTask/Protection/Enumerated Constant1'
+ * '<S7>'   : 'Protection/ProtectionTask/Protection/Condition/Compare To Constant'
+ * '<S8>'   : 'Protection/ProtectionTask/Protection/Debound/Enumerated Constant'
+ * '<S9>'   : 'Protection/ProtectionTask/Protection/Debound/Enumerated Constant1'
+ * '<S10>'  : 'Protection/ProtectionTask/Protection/Debound/MATLAB Function'
+ */
+#endif                                 /* RTW_HEADER_Protection_h_ */
+
+/*
+ * File trailer for generated code.
+ *
+ * [EOF]
+ */
