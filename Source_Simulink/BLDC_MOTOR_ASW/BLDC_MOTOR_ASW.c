@@ -5,7 +5,7 @@
  *
  * Model version                  : 1.47
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Sun Nov  1 19:29:40 2026
+ * C/C++ source code generated on : Sat Nov 14 23:33:23 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -44,7 +44,9 @@ void Controller_Function(void)         /* Explicit Task: Controller_D1 */
   /* ModelReference generated from: '<Root>/Controller' incorporates:
    *  Inport generated from: '<Root>/In Bus Element'
    */
-  ControllerTask(&(BLDC_MOTOR_ASW_DW.Controller_InstanceData.rtdw));
+  ControllerTask(&(BLDC_MOTOR_ASW_DW.Controller_InstanceData.rtb),
+                 &(BLDC_MOTOR_ASW_DW.Controller_InstanceData.rtdw),
+                 &(BLDC_MOTOR_ASW_DW.Controller_InstanceData.rtzce));
 
   /* End of Outputs for RootInportFunctionCallGenerator generated from: '<Root>/Controller_D1' */
 }
@@ -95,7 +97,8 @@ void BLDC_MOTOR_ASW_initialize(void)
 
   /* Model Initialize function for ModelReference Block: '<Root>/Controller' */
   Controller_initialize(rtmGetErrorStatusPointer(BLDC_MOTOR_ASW_M),
-                        &(BLDC_MOTOR_ASW_DW.Controller_InstanceData.rtm));
+                        &(BLDC_MOTOR_ASW_DW.Controller_InstanceData.rtm),
+                        &(BLDC_MOTOR_ASW_DW.Controller_InstanceData.rtzce));
 
   /* Model Initialize function for ModelReference Block: '<Root>/Protection' */
   Protection_initialize(rtmGetErrorStatusPointer(BLDC_MOTOR_ASW_M),
@@ -104,6 +107,9 @@ void BLDC_MOTOR_ASW_initialize(void)
   /* Model Initialize function for ModelReference Block: '<Root>/StateControl' */
   StateControl_initialize(rtmGetErrorStatusPointer(BLDC_MOTOR_ASW_M),
     &(BLDC_MOTOR_ASW_DW.StateControl_InstanceData.rtm));
+
+  /* SystemInitialize for ModelReference generated from: '<Root>/Controller' */
+  Controller_Init(&(BLDC_MOTOR_ASW_DW.Controller_InstanceData.rtdw));
 }
 
 /* Model terminate function */

@@ -5,7 +5,7 @@
  *
  * Model version                  : 1.47
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Sun Nov  1 19:29:40 2026
+ * C/C++ source code generated on : Sat Nov 14 23:33:23 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -26,6 +26,7 @@
 #include "Protection.h"
 #include "StateControl.h"
 #include <stddef.h>
+#include "zero_crossing_types.h"
 
 /* Includes for objects with custom storage classes */
 #include "CalibAdc_Internal.h"
