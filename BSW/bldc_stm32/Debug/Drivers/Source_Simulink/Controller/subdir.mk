@@ -6,18 +6,15 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Drivers/Source_Simulink/Controller/Controller.c \
-../Drivers/Source_Simulink/Controller/Controller_Decoder.c \
-../Drivers/Source_Simulink/Controller/Controller_Gates.c 
+../Drivers/Source_Simulink/Controller/Controller_data.c 
 
 OBJS += \
 ./Drivers/Source_Simulink/Controller/Controller.o \
-./Drivers/Source_Simulink/Controller/Controller_Decoder.o \
-./Drivers/Source_Simulink/Controller/Controller_Gates.o 
+./Drivers/Source_Simulink/Controller/Controller_data.o 
 
 C_DEPS += \
 ./Drivers/Source_Simulink/Controller/Controller.d \
-./Drivers/Source_Simulink/Controller/Controller_Decoder.d \
-./Drivers/Source_Simulink/Controller/Controller_Gates.d 
+./Drivers/Source_Simulink/Controller/Controller_data.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -9,6 +9,7 @@ C_SRCS += \
 ../Drivers/Source_Simulink/look1_pbinlxpw.c \
 ../Drivers/Source_Simulink/rtGetInf.c \
 ../Drivers/Source_Simulink/rtGetNaN.c \
+../Drivers/Source_Simulink/rt_atan2f_snf.c \
 ../Drivers/Source_Simulink/rt_nonfinite.c \
 ../Drivers/Source_Simulink/rt_remd_snf.c 
 
@@ -17,6 +18,7 @@ OBJS += \
 ./Drivers/Source_Simulink/look1_pbinlxpw.o \
 ./Drivers/Source_Simulink/rtGetInf.o \
 ./Drivers/Source_Simulink/rtGetNaN.o \
+./Drivers/Source_Simulink/rt_atan2f_snf.o \
 ./Drivers/Source_Simulink/rt_nonfinite.o \
 ./Drivers/Source_Simulink/rt_remd_snf.o 
 
@@ -25,6 +27,7 @@ C_DEPS += \
 ./Drivers/Source_Simulink/look1_pbinlxpw.d \
 ./Drivers/Source_Simulink/rtGetInf.d \
 ./Drivers/Source_Simulink/rtGetNaN.d \
+./Drivers/Source_Simulink/rt_atan2f_snf.d \
 ./Drivers/Source_Simulink/rt_nonfinite.d \
 ./Drivers/Source_Simulink/rt_remd_snf.d 
 
